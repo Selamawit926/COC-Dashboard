@@ -88,7 +88,7 @@ export const fetchAllCOC = async () => {
     const data = await response.json()
    
     if (response.status){
-      return data
+      return data["data"]
     }
     return []
 }

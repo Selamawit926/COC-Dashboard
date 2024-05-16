@@ -1,7 +1,7 @@
 import Graph from '../../components/Charts/Graph';
 import CityDataStats from '../../components/Charts/CityDataStats';
 import DefaultLayout from '../../layout/DefaultLayout';
-import TableThree from '../../components/Tables/TableThree';
+import AllData from '../../components/Tables/AllData';
 import CompetencyChart from '../../components/Charts/CompetencyChart';
 import Overlay from '../../components/Overlay';
 import TotalData from '../../components/TotalData';
@@ -19,7 +19,7 @@ const Dashboard = () => {
               <Graph />
             </div>
             <div className="col-span-12 xl:col-span-12">
-              <TableThree />
+              <AllData />
             </div>
           </div>
         </div>
