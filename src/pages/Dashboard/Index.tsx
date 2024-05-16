@@ -7,7 +7,7 @@ import TableThree from '../../components/Tables/TableThree';
 import CompetencyChart from '../../components/Charts/CompetencyChart';
 import Overlay from '../../components/Overlay';
 
-const ECommerce: React.FC = () => {
+const Dashboard: React.FC = () => {
   return (
     <DefaultLayout>
       <div className="grid grid-cols-12 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-12 2xl:gap-7.5">
@@ -17,41 +17,36 @@ const ECommerce: React.FC = () => {
               <div>
                 <CardDataStats
                   title="Total views"
-                  total="$3.456K"
-                  rate="0.43%"
-                  levelUp children={undefined}>
+                  total="1000"
+                  children={undefined}>
                 </CardDataStats>
               </div>
               <div>
                 <CardDataStats
                   title="Total Profit"
-                  total="$45,2K"
-                  rate="4.35%"
-                  levelUp children={undefined}>
+                  total="1000"
+                  children={undefined}>
                 </CardDataStats>
               </div>
               <div>
                 <CardDataStats
                   title="Total Product"
-                  total="2.450"
-                  rate="2.59%"
-                  levelUp children={undefined}>
+                  total="1000"
+                  children={undefined}>
                 </CardDataStats>
               </div>
               <div>
                 <CardDataStats
                   title="Total Users"
-                  total="3.456"
-                  rate="0.95%"
-                  levelDown children={undefined}>
+                  total="1000"
+                  children={undefined}>
                 </CardDataStats>
               </div>
               <div>
                 <CardDataStats
                   title="Total Users"
-                  total="3.456"
-                  rate="0.95%"
-                  levelDown children={undefined}>
+                  total="1000"
+                  children={undefined}>
                 </CardDataStats>
               </div>
             </div>
@@ -81,5 +76,5 @@ const ECommerce: React.FC = () => {
   );
 };
 
-export default ECommerce;
+export default Dashboard;
 

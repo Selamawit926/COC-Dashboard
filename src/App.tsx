@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
-import ECommerce from './pages/Dashboard/ECommerce';
+import Dashboard from './pages/Dashboard/Index';
 
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
           index
           element={
             <>
-              <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
-              <ECommerce />
+              <PageTitle title="Ethiopian National COC Dashboard" />
+              <Dashboard />
             </>
           }
         />
