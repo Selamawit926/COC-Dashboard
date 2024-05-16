@@ -1,13 +1,12 @@
-import React from 'react';
 import CardDataStats from '../../components/CardDataStats';
 import Graph from '../../components/Charts/Graph';
-import ChartTwo from '../../components/Charts/ChartTwo';
+import CityDataStats from '../../components/Charts/CityDataStats';
 import DefaultLayout from '../../layout/DefaultLayout';
 import TableThree from '../../components/Tables/TableThree';
 import CompetencyChart from '../../components/Charts/CompetencyChart';
 import Overlay from '../../components/Overlay';
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   return (
     <DefaultLayout>
       <div className="grid grid-cols-12 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-12 2xl:gap-7.5">
@@ -63,7 +62,7 @@ const Dashboard: React.FC = () => {
         <div className="col-span-12 xl:col-span-4">
           <div className="grid grid-cols-1 gap-y-6">
               <div className="col-span-12">
-                <ChartTwo />
+                <CityDataStats />
               </div>
               <div className="col-span-12">
                   <CompetencyChart />
