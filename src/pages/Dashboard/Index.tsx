@@ -1,10 +1,10 @@
-import CardDataStats from '../../components/CardDataStats';
 import Graph from '../../components/Charts/Graph';
 import CityDataStats from '../../components/Charts/CityDataStats';
 import DefaultLayout from '../../layout/DefaultLayout';
 import TableThree from '../../components/Tables/TableThree';
 import CompetencyChart from '../../components/Charts/CompetencyChart';
 import Overlay from '../../components/Overlay';
+import TotalData from '../../components/TotalData';
 
 const Dashboard = () => {
   return (
@@ -13,43 +13,8 @@ const Dashboard = () => {
         <div className="col-span-12 xl:col-span-8">
           <div className="grid grid-cols-1 gap-y-4">
             <div className='grid grid-cols-5 gap-x-2'>
-              <div>
-                <CardDataStats
-                  title="Total views"
-                  total="1000"
-                  children={undefined}>
-                </CardDataStats>
-              </div>
-              <div>
-                <CardDataStats
-                  title="Total Profit"
-                  total="1000"
-                  children={undefined}>
-                </CardDataStats>
-              </div>
-              <div>
-                <CardDataStats
-                  title="Total Product"
-                  total="1000"
-                  children={undefined}>
-                </CardDataStats>
-              </div>
-              <div>
-                <CardDataStats
-                  title="Total Users"
-                  total="1000"
-                  children={undefined}>
-                </CardDataStats>
-              </div>
-              <div>
-                <CardDataStats
-                  title="Total Users"
-                  total="1000"
-                  children={undefined}>
-                </CardDataStats>
-              </div>
+              <TotalData/>
             </div>
-
             <div className="col-span-12 xl:col-span-12">
               <Graph />
             </div>
