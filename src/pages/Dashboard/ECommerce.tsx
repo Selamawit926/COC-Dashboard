@@ -1,6 +1,6 @@
 import React from 'react';
 import CardDataStats from '../../components/CardDataStats';
-import ChartOne from '../../components/Charts/ChartOne';
+import Graph from '../../components/Charts/Graph';
 import ChartTwo from '../../components/Charts/ChartTwo';
 import DefaultLayout from '../../layout/DefaultLayout';
 import TableThree from '../../components/Tables/TableThree';
@@ -57,7 +57,7 @@ const ECommerce: React.FC = () => {
             </div>
 
             <div className="col-span-12 xl:col-span-12">
-              <ChartOne />
+              <Graph />
             </div>
             <div className="col-span-12 xl:col-span-12">
               <TableThree />

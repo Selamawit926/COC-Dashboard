@@ -1,5 +1,5 @@
 import { ApexOptions } from 'apexcharts';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const options: ApexOptions = {
@@ -48,10 +48,6 @@ const options: ApexOptions = {
     width: [2, 2],
     curve: 'straight',
   },
-  // labels: {
-  //   show: false,
-  //   position: "top",
-  // },
   grid: {
     xaxis: {
       lines: {
@@ -84,10 +80,6 @@ const options: ApexOptions = {
   xaxis: {
     type: 'category',
     categories: [
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
       'Jan',
       'Feb',
       'Mar',
@@ -96,6 +88,10 @@ const options: ApexOptions = {
       'Jun',
       'Jul',
       'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
     ],
     axisBorder: {
       show: false,
@@ -111,19 +107,20 @@ const options: ApexOptions = {
       },
     },
     min: 0,
-    max: 100,
+    max: 400,
+    tickAmount: 4,
   },
 };
 
-interface ChartOneState {
+interface GraphState {
   series: {
     name: string;
     data: number[];
   }[];
 }
 
-const ChartOne: React.FC = () => {
-  const [state, setState] = useState<ChartOneState>({
+const Graph = () => {
+  const [state, setState] = useState<GraphState>({
     series: [
       {
         name: 'Product One',
@@ -145,41 +142,40 @@ const ChartOne: React.FC = () => {
   handleReset;
 
   return (
-    <div className="col-span-12 rounded-lg border md:h-80 xl:h-200 sm:h-100 border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
-      <div className='grid grid-cols-3 divide-x divide-slate-400/25'>
-          <div className="col-span-2">
-            <div className='flex flex-col mr-4 gap-y-2'>
-              <div className='font-medium text-black'>COC Graph</div>
-              <div className='border-t border-t-slate-300'>
-                <div id="chartOne" className="-ml-5">
-                  <ReactApexChart
-                    options={options}
-                    series={state.series}
-                    type="area"
-                    height={230}
-                  />
-                </div>
+    <div className="col-span-12 rounded-xl border md:h-100 xl:h-60 sm:h-150 border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
+      <div className='grid grid-cols-1 md:grid-cols-3 divide-x divide-slate-400/25'>
+          
+        <div className="md:col-span-2 sm:col-span-1">
+          <div className='flex flex-col mr-4 gap-y-2 h-full'>
+            <div className='font-medium text-black'>COC Graph</div>
+            <div className='border-t border-t-slate-300 h-full'>
+              <div id="chartOne" className="-ml-5 h-full">
+                <ReactApexChart
+                  options={options}
+                  series={state.series}
+                  type="area"
+                  height="100%"
+                />
               </div>
-              
             </div>
-           
-          </div>
-
-          <div className="flex flex-col justify-between items-center">
-
-                <div className='font-bold text-black'>
-                  <div>Total COC Created <br/> this month</div>
-                </div>
-
-                <div>
-                  <div className='text-7xl font-bold text-black font-sans'>2460</div>
-                  <div>+23% since last month</div>
-                </div>
           </div>
         </div>
   
+        <div className="flex flex-col justify-between items-center h-full">
+          <div className='font-extrabold text-black text-sm'>
+            <div>Total COC Created <br/> this month</div>
+          </div>
+  
+          <div className='flex flex-col ml-10 pt-13'>
+            <div className='sm:text-5xl md:text-7xl font-bold text-black font-sans'>2460</div>
+            <div>+23% since last month</div>
+          </div>
+        </div>
+  
+      </div>
     </div>
   );
+  
 };
 
-export default ChartOne;
+export default Graph;
