@@ -1,10 +1,9 @@
 import { TEChart } from "tw-elements-react";
 
-
 const CompetencyChart = () => {
 
   return (
-    <div className="sm:px-7.5 col-span-12  rounded-xl border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-5">
+    <div className="sm:px-7.5 col-span-12 rounded-xl border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-5">
       <div className='flex justify-between'>
         <div className='text-black font-extrabold'>
           Competency
@@ -23,7 +22,7 @@ const CompetencyChart = () => {
       </div>
       
       <div className='flex items-center justify-center mb-10'>
-        <div className='w-30 h-30'>
+        <div className='md:w-60 md:h-60 xl:w-30 xl:h-30'>
           <TEChart
               type="pie"
               data={{
