@@ -1,10 +1,11 @@
 import React from 'react';
 import CardDataStats from '../../components/CardDataStats';
 import ChartOne from '../../components/Charts/ChartOne';
-import ChartThree from '../../components/Charts/ChartThree';
 import ChartTwo from '../../components/Charts/ChartTwo';
 import DefaultLayout from '../../layout/DefaultLayout';
 import TableThree from '../../components/Tables/TableThree';
+import CompetencyChart from '../../components/Charts/CompetencyChart';
+import Overlay from '../../components/Overlay';
 
 const ECommerce: React.FC = () => {
   return (
@@ -70,7 +71,8 @@ const ECommerce: React.FC = () => {
                 <ChartTwo />
               </div>
               <div className="col-span-12">
-                <ChartThree />
+                  <CompetencyChart />
+                  <Overlay/>
               </div>
            </div>
          </div>
