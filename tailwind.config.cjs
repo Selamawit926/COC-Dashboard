@@ -16,6 +16,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        light: '#F0F7F7',
+        lighter: '#F0F7F7',
+        assessed: '#71E17C',
+        selected: 'rgba(25, 82, 65, 0.06)',
+        sidebar: '#F9F9F9',
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',

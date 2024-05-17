@@ -57,7 +57,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
       <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-50.5 flex-col overflow-y-hidden bg-zinc-100 duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      className={`absolute left-0 top-0 z-9999 flex h-screen w-50.5 flex-col bg-sidebar overflow-y-hidden duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
@@ -106,7 +106,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         className={`group relative flex items-center gap-2.5 rounded-xl h-12 px-4 py-2 font-bold text-black duration-300 ease-in-out dark:hover:bg-meta-4 ${
                           (pathname === '/' ||
                             pathname.includes('dashboard')) &&
-                          'bg-teal-50 dark:bg-meta-4'
+                          'bg-selected bg-opacity-80 dark:bg-meta-4'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();

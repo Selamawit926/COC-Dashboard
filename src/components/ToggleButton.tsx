@@ -16,7 +16,7 @@ const ToggleButton = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 onClick={toggleSidebar}
                 aria-controls="sidebar"
                 aria-expanded={sidebarOpen}
-                className='z-10 translate-x-1 rounded-lg bg-white border border-transparent h-10 w-4 mt-20 xl:block lg:block md:hidden sm:hidden xs:hidden'
+                className='z-10 translate-x-1 rounded-lg border border-transparent bg-sidebar h-10 w-2 mt-20 xl:block lg:block md:hidden sm:hidden xs:hidden'
             >
                 {sidebarOpen ? 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="green" className="w-6 h-6">

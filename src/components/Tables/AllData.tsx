@@ -23,11 +23,11 @@ const AllData = () => {
   return (
         <table className="min-w-full table-auto">
           <thead>
-            <tr className="text-left bg-teal-50">
-              <th className="rounded-tl-lg border border-transparent w-[8%] py-3 px-4 font-medium text-black dark:text-white">
+            <tr className="text-left bg-light">
+              <th className="rounded-tl-lg border border-transparent w-[8%] py-3 px-4 font-bold text-black dark:text-white">
                 No
               </th>
-              <th className="w-[25%] py-3 px-4 font-medium text-black dark:text-white pl-17">
+              <th className="w-[25%] py-3 px-4 font-bold text-black dark:text-white pl-17">
                 <button className='relative inline-flex justify-center items-center'>
                   Name
                   <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -35,7 +35,7 @@ const AllData = () => {
                   </svg>
                 </button>
               </th>
-              <th className="w-[10%] py-3 px-4 font-medium text-black dark:text-white text-center">
+              <th className="w-[10%] py-3 px-4 font-bold text-black dark:text-white text-center">
                 <button className='relative inline-flex justify-center items-center'>
                   Assessed
                   <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -43,7 +43,7 @@ const AllData = () => {
                   </svg>
                 </button>
               </th>
-              <th className="w-[20%] py-3 px-4 font-medium text-black dark:text-white text-center">
+              <th className="w-[20%] py-3 px-4 text-black font-normal dark:text-white text-center">
                 <button className='relative inline-flex justify-center items-center'>
                   Reg.No
                   <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -51,7 +51,7 @@ const AllData = () => {
                   </svg>
                 </button>
               </th>
-              <th className="w-[20%] py-3 px-4 font-medium text-black dark:text-white text-center">
+              <th className="w-[20%] py-3 px-4 text-black font-normal dark:text-white text-center">
                 <button className='relative inline-flex justify-center items-center'>
                   Location
                   <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -59,14 +59,14 @@ const AllData = () => {
                   </svg>
                 </button>
               </th>
-              <th className="rounded-tr-lg border border-transparent w-[10%] py-3 pr-4 font-medium text-black dark:text-white text-center">
+              <th className="rounded-tr-lg border border-transparent w-[10%] py-3 pr-4 font-bold text-black dark:text-white text-center">
                 Action
               </th>
             </tr>
           </thead>
           <tbody>
             {firstFiveUsers.map((user, index) => (
-              <tr key={index} className={`${index %2 != 0 ? 'bg-stone-50' : 'bg-none' }`}>
+              <tr key={index} className={`${index %2 != 0 ? 'bg-lighter bg-opacity-50' : 'bg-none' }`}>
                 <td className='text-xs font-medium text-black px-4 py-3'>0{index + 1}</td>
                 <td className='text-xs font-medium text-black py-3'>
                   <div className='flex'>
@@ -85,7 +85,7 @@ const AllData = () => {
                 <td className='text-xs font-medium py-3'>
                   <div className="px-4 dark:border-strokedark">
                     {user.assessed ?
-                      <p className="w-30 h-8 text-center rounded-md bg-opacity-10 py-1 px-3 text-sm font-medium bg-success text-green-500">
+                      <p className="w-30 h-8 text-center rounded-md bg-opacity-10 py-1 px-3 text-sm font-medium bg-assessed text-assessed">
                         Assessed
                       </p>
                       :
@@ -106,7 +106,7 @@ const AllData = () => {
                   }
                 </td>
                 <td>
-                  <div className="text-center py-3 flex justify-center dark:border-strokedark bg-gray rounded-md h-8 w-16 items-center">
+                  <div className="text-center py-3 flex justify-center dark:border-strokedark bg-light rounded-md h-8 w-16 items-center">
                     <div>
                       <svg className="h-5 w-5 text-black-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
