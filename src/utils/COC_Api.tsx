@@ -9,8 +9,13 @@ export type COCTotalData = {
     totalDistance: number,
     totalPracticalPassed: number,
     totalCountByCity: object,
-    totalCocThisMonth: number,
-    totalCocByMonth: object,
+    totalCocThisMonth: string,
+    totalCocByMonth:{
+        _count: {
+            month: number;
+        };
+        month: string;
+    }[],
     totalPracticalPassedAndFailed: object
 }
 
