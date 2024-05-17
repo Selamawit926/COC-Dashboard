@@ -2,13 +2,25 @@
 const authorization_key = "a593e16f43bc2fa6132af7d823113f729ba32d8416120808a967";
 const apiUrl = "https://national-coc-api.lmis.gov.et"
 
+export type TotalCountByCity = {
+    _count: {
+        city: number;
+    };
+    city: string;
+}
+
 export type COCTotalData = {
     totalCoc: number,
     totalCompleted: number,
     totalRegular: number,
     totalDistance: number,
     totalPracticalPassed: number,
-    totalCountByCity: object,
+    totalCountByCity: {
+        _count: {
+            city: number;
+        };
+        city: string;
+    }[],
     totalCocThisMonth: string,
     totalCocByMonth:{
         _count: {
