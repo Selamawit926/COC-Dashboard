@@ -13,7 +13,7 @@ const DefaultLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden bg-white">
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
           <main>
-            <div className="mx-auto max-w-screen-2xl xl:p-5 md:p-2 2xl:p-4">
+            <div className="mx-auto max-w-screen-2xl p-3 xl:p-5 md:p-2 2xl:p-4">
               {children}
             </div>
           </main>

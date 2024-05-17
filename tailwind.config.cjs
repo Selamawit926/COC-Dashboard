@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       satoshi: ['Satoshi', 'sans-serif'],
+      poppins: ['Poppins']
     },
     screens: {
       '2xsm': '375px',
@@ -21,6 +22,9 @@ module.exports = {
         assessed: '#71E17C',
         selected: 'rgba(25, 82, 65, 0.06)',
         sidebar: '#F9F9F9',
+        overlay: 'rgba(240, 254, 255, 1)',
+        failed: 'rgba(255, 104, 104, 1)',
+        passed: 'rgba(35, 231, 173, 1)',
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',

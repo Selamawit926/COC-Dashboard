@@ -46,7 +46,7 @@ const CompetencyChart = () => {
         </div>
         
         <div className='flex items-center justify-center mb-10'>
-          <div className='md:w-60 md:h-60 xl:w-30 xl:h-30'>
+          <div className='w-30 xl:h-30 pb-5 sm:pb-0'>
             <TEChart
                 type="pie"
                 data={{
@@ -55,8 +55,8 @@ const CompetencyChart = () => {
                       label: "Competency",
                       data: [totalFailed, totalPassed],
                       backgroundColor: [
-                        "rgba(255, 0, 0, 0.6)",
-                        "rgba(0, 255, 0.5)"
+                        "rgba(255, 104, 104, 1)",
+                        "rgba(35, 231, 173, 1)"
                       ],
                       borderWidth: 0
                     },

@@ -11,13 +11,13 @@ const Dashboard = () => {
       <div className="grid grid-cols-12 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-12 2xl:gap-7.5">
         <div className="col-span-12 xl:col-span-8">
           <div className="grid grid-cols-1 gap-y-4">
-            <div className='grid grid-cols-5 gap-x-2'>
+            <div className='grid md:grid-cols-5 gap-x-2 sm:grid-cols-3'>
               <TotalData/>
             </div>
-            <div className="col-span-12 xl:col-span-12">
+            <div className="col-span-12 md:col-span-12">
               <Graph />
             </div>
-            <div className="col-span-12 xl:col-span-12">
+            <div className="col-span-12 md:col-span-12">
               <AllData />
             </div>
           </div>

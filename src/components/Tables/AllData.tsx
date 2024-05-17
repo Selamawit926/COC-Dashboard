@@ -21,9 +21,10 @@ const AllData = () => {
   const firstFiveUsers = users.slice(0, 5);
 
   return (
-        <table className="min-w-full table-auto">
+    <div className='flex items-center'>
+      <table className="min-w-full table-auto">
           <thead>
-            <tr className="text-left bg-light">
+            <tr className="text-left bg-light flex flex-col sm:table-row">
               <th className="rounded-tl-lg border border-transparent w-[8%] py-3 px-4 font-bold text-black dark:text-white">
                 No
               </th>
@@ -66,7 +67,7 @@ const AllData = () => {
           </thead>
           <tbody>
             {firstFiveUsers.map((user, index) => (
-              <tr key={index} className={`${index %2 != 0 ? 'bg-lighter bg-opacity-50' : 'bg-none' }`}>
+              <tr key={index} className={`${index %2 != 0 ? 'bg-lighter bg-opacity-50' : 'bg-none' } flex flex-col sm:table-row`}>
                 <td className='text-xs font-medium text-black px-4 py-3'>0{index + 1}</td>
                 <td className='text-xs font-medium text-black py-3'>
                   <div className='flex'>
@@ -122,6 +123,8 @@ const AllData = () => {
             ))}
           </tbody>
         </table>
+    </div>
+        
   );
 };
 
