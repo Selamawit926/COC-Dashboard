@@ -1,8 +1,10 @@
 
-const Overlay = () => {
+const Overlay = ({ totalPassed, totalFailed }: { totalPassed: number; totalFailed: number; }) => {
+    const passedPercentage = totalPassed / 100;
+    const failedPercentage = totalFailed / 100;
     return (
         <div className='w-full h-full xl:px-7 md:px-35 bg-opacity-50 flex justify-center'>
-            <div className="rounded-xl w-full xl:h-16 md:h-20 bg-teal-50 bg-teal-50 md:-translate-y-10">
+            <div className="rounded-xl w-full xl:h-16 md:h-20 bg-teal-50 bg-teal-50 md:-translate-y-10 sm:-translate-y-16 xs:-translate-y-15">
                 <div className='flex justify-between'>
 
                     <div className='xl:p-4 md:p-6 px-7'>
@@ -10,7 +12,7 @@ const Overlay = () => {
                         <div className='h-2 w-2 bg-red-500 rounded-full'></div>
                         <p className='text-xs font-medium px-2'>Total Failed</p>
                         </div>
-                        <p className='text-sm text-black font-black px-4'>63%</p>
+                        <p className='text-sm text-black font-black px-4'>{failedPercentage}%</p>
 
                     </div>
 
@@ -19,7 +21,7 @@ const Overlay = () => {
                         <div className='h-2 w-2 bg-green-500 rounded-full'></div>
                         <p className='text-xs font-medium px-2'>Total Passed</p>
                         </div>
-                        <p className='text-sm text-black font-black px-4'>37%</p>
+                        <p className='text-sm text-black font-black px-4'>{passedPercentage}%</p>
 
                     </div>
                 </div>

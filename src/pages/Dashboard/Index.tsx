@@ -3,7 +3,6 @@ import CityDataStats from '../../components/Charts/CityDataStats';
 import DefaultLayout from '../../layout/DefaultLayout';
 import AllData from '../../components/Tables/AllData';
 import CompetencyChart from '../../components/Charts/CompetencyChart';
-import Overlay from '../../components/Overlay';
 import TotalData from '../../components/TotalData';
 
 const Dashboard = () => {
@@ -31,7 +30,6 @@ const Dashboard = () => {
               </div>
               <div className="col-span-12">
                   <CompetencyChart />
-                  <Overlay/>
               </div>
            </div>
          </div>
