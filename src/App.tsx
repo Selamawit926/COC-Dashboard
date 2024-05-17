@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
-import Dashboard from './pages/Dashboard/index';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 function App() {
